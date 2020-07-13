@@ -1,5 +1,5 @@
 # Aeternam-Beauty
-E-commerce Beauty **Platform**
+E-commerce Beauty Platform
 
 ## Overview
 
