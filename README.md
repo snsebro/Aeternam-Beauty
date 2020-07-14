@@ -12,7 +12,7 @@ E-commerce Beauty Platform
 The **Aeternam Beauty** MVP will consist of an easy to navigate frontend site, that will display all products within the current inventory database with users being able to filter products by various criteria (ex. price, collection, or sale). Additionally authentication will be provided allowing logged in users to create reviews for various products. Authentication will also allow logged in shop owners to create, edit, and delete products ultimately controlling what is rendered on the frontend.
 
 <br>
-
+****
 ### Goals
 
 - Create a well designed easy to navigate frontend site
