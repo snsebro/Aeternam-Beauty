@@ -1,4 +1,26 @@
 .login-register {
   height: calc(100vh - 190px);
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "account-links login register";
+}
+
+.account-links {
+  grid-area: account-links;
+  display: flex;
+  flex-direction: column;
+}
+
+.login {
+  grid-area: login;
+  display: flex;
+  flex-direction: column;
+}
+
+.register {
+  grid-area: register;
+  display: flex;
+  flex-direction: column;
 }

@@ -6,6 +6,7 @@ import Homepage from "./pages/Homepage/Homepage";
 
 import "./App.css";
 import Footer from "./components/Footer/Footer";
+import LoginRegister from "./pages/LoginRegister/LoginRegister";
 
 function App() {
   return (
@@ -13,8 +14,11 @@ function App() {
       <Route path="/">
         <Header />
       </Route>
-      <Route path="/">
+      <Route exact path="/">
         <Homepage />
+      </Route>
+      <Route path="/login-register">
+        <LoginRegister />
       </Route>
       <Route path="/">
         <Footer />
