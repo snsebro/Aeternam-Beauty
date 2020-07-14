@@ -1,0 +1,93 @@
+header {
+  height: 190px;
+  width: 100%;
+  margin: 0;
+}
+
+.aeternam {
+  height: 54px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aeternam h1 {
+  font-weight: 400;
+  letter-spacing: 10px;
+}
+
+.promo-message {
+  height: 73px;
+  background-color: #CBB9CB;
+  font-weight: 100;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.promo-message h5 {
+  /* margin-bottom: 10px; */
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.promo-message h6 {
+  margin-top: 8px;
+  font-size: 10px;
+  font-weight: 100;
+}
+
+.nav {
+  height: 63px;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin: 0 50px;
+  letter-spacing: 5px;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+}
+
+.nav-icons {
+  /* background-color: white; */
+  height: 50px;
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: auto;
+}
+
+.svg {
+  
+}

@@ -67,9 +67,9 @@ src
         |__ Reviews.jsx
         |__ Reviews.css
 |__ pages/
-      |__ Hompage
-        |__ Hompage.jsx
-        |__ Hompage.css
+      |__ Homepage
+        |__ Homepage.jsx
+        |__ Homepage.css
       |__ Shop
         |__ Shop.jsx
         |__ Shop.css
