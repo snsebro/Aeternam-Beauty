@@ -33,12 +33,14 @@ header {
   margin: 0 auto;
   font-size: 14px;
   font-weight: 100;
+  letter-spacing: 3px;
 }
 
 .promo-message h6 {
-  margin-top: 8px;
+  margin-top: 12px;
   font-size: 10px;
   font-weight: 100;
+  letter-spacing: 3px;
 }
 
 .nav {
@@ -89,5 +91,5 @@ a {
 }
 
 .svg {
-  
+
 }

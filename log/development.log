@@ -410,3 +410,42 @@ Processing by ReviewsController#index as HTML
 Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 985)
 
 
+Started GET "/users/13/reviews" for ::1 at 2020-07-13 23:35:39 -0400
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReviewsController#index as HTML
+  Parameters: {"user_id"=>"13"}
+  [1m[36mReview Load (3.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:8:in `index'
+Completed 200 OK in 37ms (Views: 8.9ms | ActiveRecord: 16.7ms | Allocations: 6331)
+
+
+Started GET "/products" for ::1 at 2020-07-13 23:35:56 -0400
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:8:in `index'
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."product_id" = $1[0m  [["product_id", 8]]
+  ↳ app/controllers/products_controller.rb:8:in `index'
+Completed 200 OK in 72ms (Views: 49.3ms | ActiveRecord: 5.4ms | Allocations: 12503)
+
+
+Started GET "/users" for ::1 at 2020-07-13 23:36:10 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 8.1ms | ActiveRecord: 4.9ms | Allocations: 6365)
+
+
+Started GET "/" for ::1 at 2020-07-14 09:33:25 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shayne/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shayne/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 59.3ms | Allocations: 295)
+Completed 200 OK in 130ms (Views: 78.1ms | ActiveRecord: 0.0ms | Allocations: 1533)
+
+
+Started GET "/" for ::1 at 2020-07-14 09:34:10 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shayne/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shayne/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.0ms | Allocations: 179)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 712)
+
+
