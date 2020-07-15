@@ -1,0 +1,23 @@
+.product-div {
+  width: 20%;
+  margin: 0px 20px 100px 20px;
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: 3px;
+}
+
+.product-div img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.product-div a {
+  text-decoration: none;
+  color: black;
+  font-weight: 100;
+}
+
+.product-div h4, p{
+  font-weight: 200;
+}

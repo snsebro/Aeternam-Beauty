@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { Route, withRouter } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Homepage from "./pages/Homepage/Homepage";
 import Profile from "./pages/Profile/Profile";
+
+import {getAllProducts} from "./services/products"
 
 import {
   loginUser,
@@ -15,14 +17,23 @@ import {
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import LoginRegister from "./pages/LoginRegister/LoginRegister";
+import Shop from "./pages/Shop/Shop";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
 
 class App extends Component {
   state = {
     currentUser: null,
+    products: []
   };
 
   componentDidMount = async () => {
     this.handleVerify()
+    this.fetchProducts()
+  }
+
+  fetchProducts = async () => {
+    const products = await getAllProducts()
+    this.setState({products})
   }
 
   handleLogin = async (userData) => {
@@ -56,7 +67,7 @@ class App extends Component {
           <Header currentUser={this.state.currentUser} />
         </Route>
         <Route exact path="/">
-          <Homepage />
+          <Homepage products={this.state.products}/>
         </Route>
         <Route path="/login-register">
           <LoginRegister
@@ -70,6 +81,8 @@ class App extends Component {
         <Route path="/profile">
           <Profile handleLogout={this.handleLogout}/>
         </Route>
+        <Route path="/shop"><Shop products={this.state.products} /></Route>
+        <Route path="/products/:id"><ProductDetail /></Route>
         <Route path="/">
           <Footer />
         </Route>

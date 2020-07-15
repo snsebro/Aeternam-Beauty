@@ -15,7 +15,7 @@ export default class Header extends Component {
     
     return (
       <header>
-        <div className="aeternam">
+        <div className="aeternam" id="aeternam">
           <a href="/"><h1>AETERNAM BEAUTY</h1></a>
         </div>
         <nav className="nav">

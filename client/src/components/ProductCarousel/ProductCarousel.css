@@ -1,0 +1,46 @@
+.product-carousel {
+  display: flex;
+  width: 100%;
+  height: 450px
+}
+
+.prev, .next{
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products img {
+  width: 222px;
+  height: 332px;
+  margin: 0px 20px;
+}
+
+.product {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.product p {
+  margin: 10px 0;
+}
+
+.product a {
+  text-decoration: none;
+  color: black;
+}
+
+.arrow :hover {
+  transform: scale(0.5);
+  transition: 0.5s;
+  pointer-events: fill;
+}
