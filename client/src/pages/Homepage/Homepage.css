@@ -1,4 +1,18 @@
 .content {
   height: calc(100vh - 190px);
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-text {
+  text-align: center;
+  margin: 100px 0px;
+}
+
+.product-text h2 {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 5px;
 }

@@ -10,14 +10,16 @@ export default class LoginRegister extends Component {
     register: {
       name: "",
       username: "",
-      password: ""
-    }
+      password: "",
+      is_admin: false
+    },
+    passwordConfirm: ""
   };
 
-  // handleInput = (e) => {
-  //   const { name, value } = e.target;
-  //   this.setState({ [name]: value });
-  // };
+  handleInput = (e) => {
+    const { name, value } = e.target;
+    this.setState({[name]: value });
+  };
 
   handleLoginInput = (e) => {
     const { name, value } = e.target;
@@ -31,17 +33,32 @@ export default class LoginRegister extends Component {
       register: { ...prevState.register, [name]: value }}));
   };
 
+  passwordMatch = () => {
+    if (this.state.register.password === this.state.passwordConfirm) {
+      return
+    } else {
+
+    }
+  }
+
   render() {
+    const { name, username, password } = this.state.register
+    const { handleRegister, handleLogin, history } = this.props
+    
     return (
       <div className="login-register">
         <div className="account-links">
-          <h5>MY ACCOUNT</h5>
-          <h5>CREATE ACCOUNT</h5>
-          <h5>CONTACT US</h5>
+         <a href="/profile"><h5>MY ACCOUNT</h5></a>
+         <a href="/login-register"><h5>CREATE ACCOUNT</h5></a>
+         <a href="/contact"><h5>CONTACT US</h5></a>
         </div>
         <div className="login">
           <h3>LOGIN TO MY ACCOUNT</h3>
-          <form>
+          <form onSubmit={(e) => {
+            e.preventDefault()
+            handleLogin(this.state.login)
+            history.push("/")
+          }}>
             <label>
               <input
                 type="text"
@@ -63,11 +80,16 @@ export default class LoginRegister extends Component {
         </div>
         <div className="register">
           <h3>CREATE AN ACCOUNT</h3>
-          <form>
+          <form onSubmit={(e) => {
+            e.preventDefault()
+            handleRegister(this.state.register)
+            history.push("/")
+          }}>
             <label>
               <input
                 type="text"
                 name="name"
+                value={name}
                 placeholder="FULL NAME"
                 onChange={this.handleRegisterInput}
               ></input>
@@ -76,6 +98,7 @@ export default class LoginRegister extends Component {
               <input
                 type="text"
                 name="username"
+                value={username}
                 placeholder="USERNAME"
                 onChange={this.handleRegisterInput}
               ></input>
@@ -84,6 +107,7 @@ export default class LoginRegister extends Component {
               <input
                 type="password"
                 name="password"
+                value={password}
                 placeholder="PASSWORD"
                 onChange={this.handleRegisterInput}
               ></input>
@@ -91,12 +115,12 @@ export default class LoginRegister extends Component {
             <label>
               <input
                 type="password"
-                name="password-confirm"
+                name="passwordConfirm"
                 placeholder="CONFIRM PASSWORD"
-                onChange={this.handleRegisterInput}
+                onChange={this.handleInput}
               ></input>
             </label>
-            <button>REGISTER</button>
+            <button disabled={this.state.passwordConfirm === password ? false : true}>REGISTER</button>
           </form>
         </div>
       </div>

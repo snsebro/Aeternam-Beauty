@@ -13,6 +13,12 @@ header {
   align-items: center;
 }
 
+.aeternam a {
+  color: white;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
 .aeternam h1 {
   font-weight: 400;
   letter-spacing: 10px;
@@ -70,7 +76,7 @@ li {
   font-size: 15px;
 }
 
-a {
+.nav-links a {
   text-decoration: none;
   color: white;
   font-weight: 200;

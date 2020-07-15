@@ -16,22 +16,22 @@ export default class Header extends Component {
     return (
       <header>
         <div className="aeternam">
-          <h1>AETERNAM BEAUTY</h1>
+          <a href="/"><h1>AETERNAM BEAUTY</h1></a>
         </div>
         <nav className="nav">
           <div className="nav-links">
             <ul>
-              <li><Link>SHOP</Link></li>
-              <li><Link>SALE</Link></li>
-              <li><Link>COLLECTIONS</Link></li>
-              <li><Link>LOOKS</Link></li>
-              <li><Link>INSPO</Link></li>
+              <li><Link to="/shop">SHOP</Link></li>
+              <li><Link to="/shop">SALE</Link></li>
+              <li><Link to="/collections">COLLECTIONS</Link></li>
+              <li><Link to="/looks">LOOKS</Link></li>
+              <li><Link to="/inspo">INSPO</Link></li>
             </ul>
           </div>
           <div className="nav-icons">
-            <Link><ProfileIcon className="icon"/></Link>
-            <Link><SearchIcon className="icon"/></Link>
-            <Link><ShoppingBagIcon className="icon"/></Link>
+            <Link to={this.props.currentUser ? "/profile" : "/login-register"}><ProfileIcon className="icon"/></Link>
+            <Link to="/shop"><SearchIcon className="icon"/></Link>
+            <Link to="/cart"><ShoppingBagIcon className="icon"/></Link>
           </div>
         </nav>
         <div className="promo-message">

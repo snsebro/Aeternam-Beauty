@@ -1,0 +1,22 @@
+.profile {
+  height: calc(100vh - 190px);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "profile-links images"
+}
+
+.profile-links {
+ grid-area: profile-links;
+ color: black;
+}
+
+.profile-links a {
+  color: black;
+}
+
+.images {
+  grid-area: images;
+}
+
