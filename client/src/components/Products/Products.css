@@ -1,5 +1,6 @@
 .product-div {
   width: 20%;
+  min-width: 215px;
   margin: 0px 20px 100px 20px;
   text-align: center;
   line-height: 40px;

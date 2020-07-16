@@ -33,6 +33,7 @@ const Shop = (props) => {
 
   return (
     <>
+      <div className="shop">
       <div className="shop-nav">
         <h1 className="shop-title">SHOP ALL</h1>
         <select>
@@ -43,7 +44,7 @@ const Shop = (props) => {
           <option value="">PRICE $$$- $</option>
         </select>
       </div>
-      <div className="shop">
+      
         <Products products={currentProducts} loading={loading} />
       </div>
       <Pagination

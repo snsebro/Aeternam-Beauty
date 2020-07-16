@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 70px;
+  justify-content: center;
 }
 
 .shop-nav {
