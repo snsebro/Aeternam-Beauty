@@ -31,7 +31,7 @@ class ProductDetail extends Component {
               <button type="submit">ADD TO CART</button>
               <h3>DESCRIPTION:</h3>
               <p className="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
                 sint impedit quasi, earum possimus quam necessitatibus alias id
                 hic beatae, provident quos dolores iure debitis quia, neque
                 officia ducimus reprehenderit.
@@ -40,7 +40,8 @@ class ProductDetail extends Component {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Assumenda odio vel asperiores cupiditate officia perferendis,
                 nam iusto reiciendis ipsa quam labore culpa velit eligendi nobis
-                laborum? Odit laborum at pariatur.
+                laborum? Odit laborum at pariatur. */}
+                {this.state.product.product_details}
               </p>
             </div>
             </div>

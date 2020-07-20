@@ -15,10 +15,10 @@ export const Products = ({ products, loading, aggregateStars, currentUser}) => {
         const starAggregate = (aggregateStars(product.reviews))
         return (
         <div className="product-div" key={product.id}>
-          <img className="product-img" src={product.product_shot} />
-          <Link to={currentUser.is_admin ? `/products/${product.id}/edit` : `/products/${product.id}`}>
-            <h4>{product.name.toUpperCase()}</h4>
-          </Link>
+            <img className="product-img" src={product.product_shot} onMouseOver={(e) => { e.target.setAttribute('src', product.alt_shot) }} onMouseOut={(e) => {e.target.setAttribute('src', product.product_shot)}}/>
+            <Link to={!currentUser || !currentUser.is_admin ? `/products/${product.id}` : `/products/${product.id}/edit`}>
+              <h4>{product.name.toUpperCase()}</h4>
+            </Link>
           <p>{product.price}</p>
           {console.log(product.reviews)}
           <StarRatings

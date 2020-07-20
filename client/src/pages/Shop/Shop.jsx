@@ -45,6 +45,10 @@ const Shop = (props) => {
     return average;
   };
 
+  // const altImage = (element, src) => {
+  //   element.setAttribute('src', src)
+  // }
+
   return (
     products && (
       <>
@@ -66,6 +70,7 @@ const Shop = (props) => {
             aggregateStars={aggregateStars}
             products={currentProducts}
             loading={loading}
+            // altImage={altImage}
           />
         </div>
         <Pagination
