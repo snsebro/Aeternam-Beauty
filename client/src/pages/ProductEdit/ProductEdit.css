@@ -1,0 +1,122 @@
+.product-detail{
+  width: 100%;
+  height: calc(100vh - 190px);
+  display: flex;
+}
+
+.product-shot {
+  margin-top: 50px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-shot input{
+  width: 50%;
+  height: 30px;
+  border-radius: 0;
+  border: 1px solid black;
+  letter-spacing: 3px;
+}
+
+.product-shot img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-info {
+  margin-top: 50px;
+  width: 50%;
+  height: 100%;
+  letter-spacing: 3px;
+
+}
+
+.product-info h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 5px;
+}
+
+.product-info button {
+  /* width: 40%; */
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  color: white;
+  background-color: black;
+  letter-spacing: 3px;
+  margin: 40px 0;
+}
+
+.product-info h3 {
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.product-info h2 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.description {
+  /* height: 200px; */
+  height: 33%;
+  width: 55%;
+  overflow-x: scroll;
+  overflow-x: hidden;
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.description::-webkit-scrollbar {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 20px;
+  width: 8px;
+}
+
+.description::-webkit-scrollbar-thumb {
+  border: none;
+  background-color:black;
+  border-radius: 20px;
+}
+
+.review-section {
+background-color: black;
+color: white;
+
+}
+
+.review-section h1 {
+  text-align: center;
+  padding: 80px 0 40px 0;
+  background-color: black;
+  letter-spacing: 7px;
+  font-size: 30px;
+  font-weight: 300px;
+
+}
+
+.review {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.review p {
+ width: 500px;
+ margin-bottom: 20px;
+ line-height: 30px;
+ letter-spacing: 2px;
+ font-size: 15px;
+
+}

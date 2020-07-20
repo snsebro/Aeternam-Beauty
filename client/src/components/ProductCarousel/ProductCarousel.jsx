@@ -17,7 +17,7 @@ export default function ProductCarousel(props) {
           return (
           <div className="product">
             <img src={product.product_shot} alt="product" />
-            <Link to={`/products/${product.id}#aeternam`}><p>{product.name.toUpperCase()}</p></Link>
+              <Link to={props.currentUser && props.currentUser.is_admin ? `/products/${product.id}/edit` : `/products/${product.id}`}><p>{product.name.toUpperCase()}</p></Link>
             <p>{product.price}</p>
           </div>)
         })}

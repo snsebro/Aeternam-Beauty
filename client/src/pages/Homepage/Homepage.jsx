@@ -18,7 +18,7 @@ export default function Homepage(props) {
       <div className="product-text">
         <h2>NEW IN!</h2>
       </div>
-      <ProductCarousel products={props.products} />
+      <ProductCarousel products={props.products} currentUser={props.currentUser} />
       <div className="content">
         <HeroCTA
           className="icy"
@@ -29,7 +29,7 @@ export default function Homepage(props) {
       <div className="product-text">
         <h2>SALE!</h2>
       </div>
-      <ProductCarousel products={props.products}/>
+      <ProductCarousel products={props.products} currentUser={props.currentUser} />
       <div className="content">
         <HeroCTA
           className="color-pop"

@@ -1,0 +1,23 @@
+.create-form {
+  height: calc(100vh - 190px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form{
+display: flex;
+
+}
+
+.form-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}

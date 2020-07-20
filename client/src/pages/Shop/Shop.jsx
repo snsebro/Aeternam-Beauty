@@ -7,7 +7,6 @@ import "./Shop.css";
 
 const Shop = (props) => {
   const [products, setProducts] = useState([]);
-  // const products = props.products
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(16);
@@ -31,28 +30,51 @@ const Shop = (props) => {
   //Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  const aggregateStars = (reviews) => {
+    let sum = 0;
+    let length = reviews.length;
+    console.log(length);
+
+    if (reviews.length <= 0) return 1;
+    reviews.forEach((review) => {
+      sum += parseInt(review.stars);
+    });
+
+    let average = sum / length;
+    console.log(typeof average);
+    return average;
+  };
+
   return (
-    <>
-      <div className="shop">
-      <div className="shop-nav">
-        <h1 className="shop-title">SHOP ALL</h1>
-        <select>
-          <option value="">SHOP ALL</option>
-          <option value="">NEW IN</option>
-          <option value="">SALE</option>
-          <option value="">PRICE $ - $$$</option>
-          <option value="">PRICE $$$- $</option>
-        </select>
-      </div>
-      
-        <Products products={currentProducts} loading={loading} />
-      </div>
-      <Pagination
-        productsPerPage={productsPerPage}
-        totalProducts={products.length}
-        paginate={paginate}
-      />
-    </>
+    products && (
+      <>
+        {console.log(currentProducts)}
+        <div className="shop">
+          <div className="shop-nav">
+            <h1 className="shop-title">SHOP ALL</h1>
+            <select onChange={props.handleSortChange}>
+              <option value="">SHOP ALL</option>
+              <option value="">NEW IN</option>
+              <option value="">SALE</option>
+              <option value="price-ascending">PRICE $ - $$$</option>
+              <option value="price-descending">PRICE $$$- $</option>
+            </select>
+          </div>
+
+          <Products
+            currentUser={props.currentUser}
+            aggregateStars={aggregateStars}
+            products={currentProducts}
+            loading={loading}
+          />
+        </div>
+        <Pagination
+          productsPerPage={productsPerPage}
+          totalProducts={products.length}
+          paginate={paginate}
+        />
+      </>
+    )
   );
 };
 

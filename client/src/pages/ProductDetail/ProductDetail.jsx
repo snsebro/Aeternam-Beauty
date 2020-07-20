@@ -28,7 +28,7 @@ class ProductDetail extends Component {
             <div className="product-info">
               <h1>{this.state.product.name.toUpperCase()}</h1>
               <h2>$ {this.state.product.price}</h2>
-              <button>ADD TO CART</button>
+              <button type="submit">ADD TO CART</button>
               <h3>DESCRIPTION:</h3>
               <p className="description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
@@ -43,10 +43,10 @@ class ProductDetail extends Component {
                 laborum? Odit laborum at pariatur.
               </p>
             </div>
-          </div>
+            </div>
           <div className="review-section">
             <h1>REVIEWS</h1>
-              <Reviews reviews={this.state.product.reviews}/>
+            <Reviews currentUser={this.props.currentUser} currentProduct={this.state.product} reviews={this.state.product.reviews}/>
             
           </div>
         </>

@@ -2,7 +2,7 @@
   height: calc(100vh - 190px);
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr;
   grid-template-areas: "profile-links images"
 }
@@ -10,6 +10,12 @@
 .profile-links {
  grid-area: profile-links;
  color: black;
+ margin-top: 105px;
+}
+
+.profile-links h4 {
+  margin: 30px 0;
+  letter-spacing: 2px;
 }
 
 .profile-links a {
@@ -18,5 +24,12 @@
 
 .images {
   grid-area: images;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
+.images img {
+  object-fit: cover;
+  height: 350px;
+}
