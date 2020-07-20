@@ -1,5 +1,5 @@
 class AuthenticationController < ApplicationController
-
+  before_action :authorize_request, except: :login
 
   #/auth/login
   def login
@@ -14,6 +14,8 @@ class AuthenticationController < ApplicationController
 
   #/auth/verify
   def verify
+    puts 'THIS IS THE VERIFY DEF'
+    puts @current_user
     render json: @current_user, status: :ok
   end
 
