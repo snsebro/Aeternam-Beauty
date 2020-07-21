@@ -20,7 +20,6 @@ export const Products = ({ products, loading, aggregateStars, currentUser}) => {
               <h4>{product.name.toUpperCase()}</h4>
             </Link>
           <p>{product.price}</p>
-          {console.log(product.reviews)}
           <StarRatings
             numberOfStars={5}
             starRatedColor="black"

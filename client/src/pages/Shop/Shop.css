@@ -23,6 +23,11 @@ border: none;
 background-color: black;
 color: white;
 outline: none;
+padding: 0 15px;
+letter-spacing: 2px;
+font-size: 15px;
+font-weight: 200;
+font-family: 'Lato', sans-serif;
 }
 
 
@@ -35,4 +40,21 @@ outline: none;
   letter-spacing: 3px;
   font-size: 25px;
   font-weight: 400;
+}
+
+.pages {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pages a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.pages li {
+  list-style: none;
+  margin: 50px auto;
 }

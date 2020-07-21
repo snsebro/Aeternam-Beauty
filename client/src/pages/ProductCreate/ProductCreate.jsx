@@ -35,22 +35,24 @@ class ProductCreate extends Component {
               placeholder="NAME"
               name="name"
               onChange={this.handleInputChange}
+              className="txt-input"
             ></input>
-            <select name="on_sale" onChange={this.handleInputChange}>
+            <select name="on_sale" onChange={this.handleInputChange} className="txt-input">
               <option>ON SALE?</option>
               <option ngValue={true}>true</option>
               <option ngValue={false}>false</option>
             </select>
-            <select name="new_in" onChange={this.handleInputChange}>
+            <select name="new_in" onChange={this.handleInputChange} className="txt-input">
               <option>NEW IN?</option>
               <option value="true">YES</option>
               <option value="false">NO</option>
             </select >
             <input
-              type="text"
+              type="number"
               placeholder="PRICE"
               name="price"
               onChange={this.handleInputChange}
+              className="txt-input"
             ></input>
           </div>
           <div className="form-right">
@@ -59,12 +61,14 @@ class ProductCreate extends Component {
               placeholder="PRODUCT SHOT URL"
               name="product_shot"
               onChange={this.handleInputChange}
+              className="txt-input"
             ></input>
             <input
               type="text"
               placeholder="ALTERNATE SHOT URL"
               name="alt_shot"
               onChange={this.handleInputChange}
+              className="txt-input"
             ></input>
             <textarea
               name="product_details"
@@ -72,10 +76,12 @@ class ProductCreate extends Component {
               cols="30"
               rows="10"
               onChange={this.handleInputChange}
+              placeholder="PRODUCT DESCRIPTION"
+              className="txt-area"
             ></textarea>
           </div>
-          <button type="submit">ADD ITEM</button>
         </form>
+          <button type="submit" className="add-button">ADD ITEM</button>
       </div>
     );
   }

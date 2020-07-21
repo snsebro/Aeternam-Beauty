@@ -7,7 +7,7 @@ import React from 'react'
     pageNumbers.push(i)
   }
   return (
-    <nav>
+    <nav className="pages">
       {pageNumbers.map(number => (
         <li key={number}>
           <a onClick={() => paginate(number)} href={`#/${number}`}>

@@ -46,14 +46,14 @@ class ProductDetail extends Component {
   render() {
     return (
       this.state.product && (
-        <form onSubmit={(e) => {
+        <form className="edit-form" onSubmit={(e) => {
           e.preventDefault()
           this.handleProductEdit(this.state.product)
           this.props.history.push(`/products/${this.props.match.params.id}/edit`)
         }
         }>
-          <div className="product-detail">
-            <div className="product-shot">
+          <div className="edit-product-div">
+            <div className="image-update">
               <img src={this.state.product.product_shot} />
               <input
                 name="product_shot"
@@ -68,31 +68,35 @@ class ProductDetail extends Component {
                 onChange={this.handleInputChange}
               ></input>
             </div>
-            <div className="product-info">
+            <div className="info-update">
+            <h3>NAME:</h3>
               <input
                 name="name"
                 type="text"
                 value={this.state.product.name.toUpperCase()}
                 onChange={this.handleInputChange}
               ></input>
+              <h3>PRICE:</h3>
               <input
                 name="price"
                 type="text"
                 value={this.state.product.price.toUpperCase()}
                 onChange={this.handleInputChange}
               ></input>
-              <button type="submit">EDIT PRODUCT</button>
               <h3>DESCRIPTION:</h3>
-              <p className="description">
-                <input
+              <p className="edit-description">
+                <textarea
+                  id="description-input"
                   name="product_details"
                   type="text"
                   value={this.state.product.product_details}
                   onChange={this.handleInputChange}
-                ></input>
+                ></textarea>
               </p>
-            </div>
+              <button type="submit">EDIT PRODUCT</button>
+              <br/>
             <button onClick={this.handleProductDelete}>DELETE PRODUCT</button>
+            </div>
           </div>
           <div className="review-section">
             <h1>REVIEWS</h1>

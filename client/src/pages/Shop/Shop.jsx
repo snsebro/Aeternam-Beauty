@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import api from "../../services/apiconfig";
 import { Products } from "../../components/Products/Products";
 import Pagination from "../../components/pagination";
+import { AZ, ZA, lowestFirst, highestFirst } from "../../components/sort";
 
 import "./Shop.css";
 
@@ -10,6 +11,7 @@ const Shop = (props) => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(16);
+  const [selectValue, setSelectValue] = useState('Featured');
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -33,7 +35,6 @@ const Shop = (props) => {
   const aggregateStars = (reviews) => {
     let sum = 0;
     let length = reviews.length;
-    console.log(length);
 
     if (reviews.length <= 0) return 1;
     reviews.forEach((review) => {
@@ -41,13 +42,38 @@ const Shop = (props) => {
     });
 
     let average = sum / length;
-    console.log(typeof average);
     return average;
   };
 
-  // const altImage = (element, src) => {
-  //   element.setAttribute('src', src)
-  // }
+  const handleSortChange = (event) => {
+    setSelectValue({ selectValue: event.target.value });
+    let input = event.target.value; // a-z
+    // const { products } = this.state;
+    switch (input) {
+      case "name-ascending":
+        setProducts({
+          products: AZ(products),
+        });
+        break;
+      case "name-descending":
+        setProducts({
+          products: ZA(products),
+        });
+        break;
+      case "price-ascending":
+        setProducts({
+          products: lowestFirst(products),
+        });
+        break;
+      case "price-descending":
+        setProducts({
+          products: highestFirst(products),
+        });
+        break;
+      default:
+        break;
+    }
+  };
 
   return (
     products && (
@@ -56,13 +82,20 @@ const Shop = (props) => {
         <div className="shop">
           <div className="shop-nav">
             <h1 className="shop-title">SHOP ALL</h1>
-            <select onChange={props.handleSortChange}>
-              <option value="">SHOP ALL</option>
-              <option value="">NEW IN</option>
-              <option value="">SALE</option>
-              <option value="price-ascending">PRICE $ - $$$</option>
-              <option value="price-descending">PRICE $$$- $</option>
-            </select>
+            <form
+              className="sort-container"
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <label>
+                <select value={props.selectValue} onChange={handleSortChange}>
+                  <option value="shop-all">SHOP ALL</option>
+                  <option value="new-in">NEW IN</option>
+                  <option value="sale">SALE</option>
+                  <option value="price-ascending">PRICE $ - $$$</option>
+                  <option value="price-descending">PRICE $$$- $</option>
+                </select>
+              </label>
+            </form>
           </div>
 
           <Products

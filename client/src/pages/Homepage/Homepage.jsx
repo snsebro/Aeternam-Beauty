@@ -2,8 +2,6 @@ import React from "react";
 import "./Homepage.css";
 import HeroCTA from "../../components/HeroCTA/HeroCTA";
 import ProductCarousel from "../../components/ProductCarousel/ProductCarousel";
-import { ReactComponent as BackArrow } from "../../frontend_assets/back-arrow.svg"
-import {ReactComponent as ForwardArrow} from "../../frontend_assets/forward-arrow.svg"
 
 export default function Homepage(props) {
   return (
@@ -18,7 +16,7 @@ export default function Homepage(props) {
       <div className="product-text">
         <h2>NEW IN!</h2>
       </div>
-      <ProductCarousel products={props.products} currentUser={props.currentUser} />
+      <ProductCarousel products={props.products.filter(product => product.new_in)} currentUser={props.currentUser} />
       <div className="content">
         <HeroCTA
           className="icy"
@@ -29,7 +27,7 @@ export default function Homepage(props) {
       <div className="product-text">
         <h2>SALE!</h2>
       </div>
-      <ProductCarousel products={props.products} currentUser={props.currentUser} />
+      <ProductCarousel products={props.products.filter(product => product.on_sale)} currentUser={props.currentUser} />
       <div className="content">
         <HeroCTA
           className="color-pop"

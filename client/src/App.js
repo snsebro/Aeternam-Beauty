@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect } from "react";
 import { Route, withRouter } from "react-router-dom";
-import {AZ, ZA, lowestFirst, highestFirst} from "./components/sort"
+import { AZ, ZA, lowestFirst, highestFirst } from "./components/sort";
 
 import Header from "./components/Header/Header";
 import Homepage from "./pages/Homepage/Homepage";
@@ -21,12 +21,13 @@ import LoginRegister from "./pages/LoginRegister/LoginRegister";
 import Shop from "./pages/Shop/Shop";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import ProductEdit from "./pages/ProductEdit/ProductEdit";
-import ProductCreate  from "./pages/ProductCreate/ProductCreate";
+import ProductCreate from "./pages/ProductCreate/ProductCreate";
 
 class App extends Component {
   state = {
     currentUser: null,
     products: [],
+    selectValue: "Featured",
   };
 
   componentDidMount = async () => {
@@ -50,45 +51,45 @@ class App extends Component {
   };
 
   handleProductCreate = async (productData) => {
-    const newProduct = await createProduct(productData)
-    this.setState(prevState => ({
-      products: [...prevState.products, newProduct]
-    }))
-  }
+    const newProduct = await createProduct(productData);
+    this.setState((prevState) => ({
+      products: [...prevState.products, newProduct],
+    }));
+  };
 
   // handleReviewCreate = async (reviewData) => {
-  //   const newReview = await 
+  //   const newReview = await
   // }
 
-  handleSortChange = event => {
+  handleSortChange = (event) => {
     this.setState({ selectValue: event.target.value });
     let input = event.target.value; // a-z
     const { products } = this.state;
     switch (input) {
       case "name-ascending":
         this.setState({
-          products: AZ(products)
+          products: AZ(products),
         });
         break;
       case "name-descending":
         this.setState({
-          products: ZA(products)
+          products: ZA(products),
         });
         break;
       case "price-ascending":
         this.setState({
-          products: lowestFirst(products)
+          products: lowestFirst(products),
         });
         break;
       case "price-descending":
         this.setState({
-          products: highestFirst(products)
+          products: highestFirst(products),
         });
         break;
       default:
-        break
+        break;
     }
-  }
+  };
 
   handleLogout = () => {
     this.setState({
@@ -133,7 +134,12 @@ class App extends Component {
           />
         </Route>
         <Route path="/shop">
-          <Shop products={this.state.products} currentUser={this.state.currentUser} handleSortChange={this.handleSortChange}/>
+          <Shop
+            products={this.state.products}
+            currentUser={this.state.currentUser}
+            handleSortChange={this.handleSortChange}
+            selectValue={this.state.selectValue}
+          />
         </Route>
         <Route exact path="/products/:id">
           <ProductDetail currentUser={this.state.currentUser} />
@@ -142,8 +148,7 @@ class App extends Component {
           <ProductEdit />
         </Route>
         <Route path="/add-product">
-          <ProductCreate
-            handleProductCreate={this.handleProductCreate}/>
+          <ProductCreate handleProductCreate={this.handleProductCreate} />
         </Route>
         <Route path="/">
           <Footer />

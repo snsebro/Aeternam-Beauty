@@ -10,16 +10,24 @@
 .profile-links {
  grid-area: profile-links;
  color: black;
- margin-top: 105px;
+ margin:75px 0px 0px 30px;
+ 
 }
 
 .profile-links h4 {
   margin: 30px 0;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  font-weight: 300;
 }
 
 .profile-links a {
   color: black;
+  text-decoration: none;
+}
+
+.profile-links a:hover {
+  color: #9A9A9A;
+  transition: 0.3s;
 }
 
 .images {
@@ -32,4 +40,10 @@
 .images img {
   object-fit: cover;
   height: 350px;
+}
+
+.profile-container h1 {
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: 500;
 }

@@ -59,13 +59,14 @@
 .CTA button {
   width: 70%;
   margin: 20px 0px;
-  height: 30px;
+  height: 40px;
   border-radius: 0px;
   border: none;
   color: white;
   background-color: black;
   letter-spacing: 3px;
   outline: none;
+  font-weight: 500;
 }
 
 .CTA button :hover{

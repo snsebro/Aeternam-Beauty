@@ -17,7 +17,9 @@ footer h1 {
 }
 
 footer h5 {
-  font-weight: 100;
+  font-weight: 400;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
 }
 
 .title {
@@ -51,4 +53,11 @@ footer h5 {
 
 .links-4 {
   grid-area: links-4;
+}
+
+.links h6 {
+  font-weight: 100;
+  font-size: 12px;
+  margin: 8px 0;
+  letter-spacing: 1px;
 }

@@ -1,11 +1,15 @@
-.product-detail{
+.edit-product-div{
   width: 100%;
   height: calc(100vh - 190px);
   display: flex;
 }
 
-.product-shot {
-  margin-top: 50px;
+.edit-form {
+  height: calc(100vh - 190px);
+  width: 100%;
+}
+
+.image-update {
   width: 50%;
   height: 100%;
   display: flex;
@@ -14,36 +18,40 @@
   align-items: center;
 }
 
-.product-shot input{
-  width: 50%;
+.image-update input{
+  width: 250px;
   height: 30px;
   border-radius: 0;
   border: 1px solid black;
   letter-spacing: 3px;
+  margin-top: 20px;
 }
 
-.product-shot img {
-  width: 200px;
-  height: auto;
+.image-update img {
+  width: 250px;
+  height: 400px;
   object-fit: cover;
 }
 
-.product-info {
-  margin-top: 50px;
+.info-update {
+  display: flex;
+  flex-direction: column;
   width: 50%;
   height: 100%;
   letter-spacing: 3px;
+  justify-content: center;
+  align-items: center;
 
 }
 
-.product-info h1 {
+.info-update h1 {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 30px;
   letter-spacing: 5px;
 }
 
-.product-info button {
+.info-update button {
   /* width: 40%; */
   width: 200px;
   height: 40px;
@@ -53,42 +61,51 @@
   color: white;
   background-color: black;
   letter-spacing: 3px;
-  margin: 40px 0;
 }
 
-.product-info h3 {
+.info-update h3 {
   font-weight: 400;
   font-size: 15px;
-  margin-bottom: 30px;
+  margin: 25px 0px;
 }
 
-.product-info h2 {
+.info-update h2 {
   font-weight: 400;
   font-size: 20px;
 }
 
-.description {
-  /* height: 200px; */
-  height: 33%;
-  width: 55%;
-  overflow-x: scroll;
-  overflow-x: hidden;
-  font-size: 15px;
-  font-weight: 200;
+.info-update input {
+  width: 300px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 0px;
+  outline: none;
 }
 
-.description::-webkit-scrollbar {
+#description-input {
+  height: 150px;
+  width: 300px;
+  overflow-y: scroll;
+  border: 1px solid white;
+  outline: none;
+  border-radius: 0;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+#description-input::-webkit-scrollbar {
   border: 1px solid black;
   background-color: white;
   border-radius: 20px;
   width: 8px;
 }
 
-.description::-webkit-scrollbar-thumb {
+#description-input::-webkit-scrollbar-thumb {
   border: none;
   background-color:black;
   border-radius: 20px;
 }
+
 
 .review-section {
 background-color: black;

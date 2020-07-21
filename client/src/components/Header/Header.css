@@ -63,6 +63,19 @@ header {
   justify-content: space-around;
   align-items: center;
   width: 80%;
+  overflow-y: scroll;
+  cursor: grab;
+}
+
+.nav-links::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+}
+
+.nav-links::-webkit-scrollbar-thumb {
+  border: none;
+  background-color:black;
+  border-radius: 20px;
 }
 
 ul {
@@ -89,10 +102,11 @@ li {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  /* margin: 0 20px; */
 }
 
 .icon {
-  width: 20px;
+  width: 18px;
   height: auto;
 }
 

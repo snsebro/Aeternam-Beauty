@@ -2,11 +2,10 @@
   width: 100%;
   height: calc(100vh - 190px);
   display: flex;
-  margin-bottom: 20px;
+
 }
 
 .product-shot {
-  margin-top: 50px;
   width: 50%;
   height: 100%;
   display: flex;
@@ -14,13 +13,13 @@
 }
 
 .product-shot img {
-  width: 50%;
-  height: 80%;
+  width: 250px;
+  height: 400px;
+  margin: auto auto;
   object-fit: cover;
 }
 
 .product-info {
-  margin-top: 50px;
   width: 50%;
   height: 100%;
   letter-spacing: 3px;
@@ -30,8 +29,9 @@
 .product-info h1 {
   font-size: 30px;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin: 30px 0px;
   letter-spacing: 5px;
+  width: 80%;
 }
 
 .product-info button {

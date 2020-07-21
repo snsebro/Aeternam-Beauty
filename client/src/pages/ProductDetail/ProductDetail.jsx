@@ -1,5 +1,4 @@
 import "./ProductDetail.css";
-import api from "../../services/apiconfig";
 import { getProduct } from "../../services/products";
 
 import React, { Component } from "react";

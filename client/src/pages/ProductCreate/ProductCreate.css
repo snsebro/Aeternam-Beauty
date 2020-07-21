@@ -1,23 +1,86 @@
 .create-form {
-  height: calc(100vh - 190px);
+  height: calc(100vh - 180px);
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
+.create-form h1 {
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+
 .form{
 display: flex;
+height: 100%;
 
 }
 
 .form-left {
   width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.form-left input {
+margin: 30px;
+}
+
+.form-left select {
+  margin: 30px;
+  }
 
 .form-right {
   width: 50%;
   display: flex;
+  height: 100%;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.txt-input {
+  width: 380px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 0px;
+  outline: none; 
+  letter-spacing: 2px;
+  margin: 20px;
+  padding-left: 20px;
+  text-transform: uppercase;
+}
+
+.txt-area {
+  resize: none;
+  height: 150px;   
+  width: 370px;
+  border: 1px solid black;
+  border-radius: 0px;
+  outline: none; 
+  letter-spacing: 2px;
+  margin: 20px;
+  font-family: 'Lato', sans-serif;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.add-button {
+  width: 200px;
+  height: 70px;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  color: white;
+  background-color: black;
+  letter-spacing: 3px;
+  margin: 0 auto 20px auto;
+  text-align: center;
 }

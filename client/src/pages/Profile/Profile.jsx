@@ -8,7 +8,7 @@ export default class Profile extends Component {
     return ( this.props.currentUser && (
       <div className="profile-container">
         {console.log(this.props.currentUser.name)}
-        <h1>{`Hi, ${this.props.currentUser.name}`}</h1>
+        {/* <h1>{`Hi, ${this.props.currentUser.name}`}</h1> */}
         <div className="profile">
           <div className="profile-links">
             {this.props.currentUser.is_admin ? <Link to="/shop"><h4>VIEW INVENTORY</h4></Link> : <Link to="/past-orders"><h4>PAST ORDERS</h4></Link>}
@@ -16,9 +16,9 @@ export default class Profile extends Component {
             {<Link to="/" onClick={this.props.handleLogout}><h4>LOGOUT</h4></Link>}
           </div>
           <div className="images">
-            <img src="https://i.ibb.co/K5s1L9j/profile-image-blue.png" />
-            <img src="https://i.ibb.co/qRx7XPC/profile-image-green.png" alt="" />
-            <img src="https://i.ibb.co/99wXv55/profile-image-yellow.png" alt="" />
+            <img src="https://i.ibb.co/1LrFbbD/profile-blue.jpg" alt="model"/>
+            <img src="https://i.ibb.co/87KS2Zf/profile-green.jpg" alt="model" />
+            <img src="https://i.ibb.co/m8Y38qK/profile-yellow.jpg" alt="model" />
           </div>
         </div>
       </div >)
@@ -26,3 +26,7 @@ export default class Profile extends Component {
     };
   }
 }
+
+
+
+
