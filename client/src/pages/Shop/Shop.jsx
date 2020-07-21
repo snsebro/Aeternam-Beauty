@@ -87,7 +87,7 @@ const Shop = (props) => {
               onSubmit={(e) => e.preventDefault()}
             >
               <label>
-                <select value={props.selectValue} onChange={handleSortChange}>
+                <select value={props.selectValue}>
                   <option value="shop-all">SHOP ALL</option>
                   <option value="new-in">NEW IN</option>
                   <option value="sale">SALE</option>
