@@ -48,9 +48,9 @@ export default class LoginRegister extends Component {
     return (
       <div className="login-register">
         <div className="account-links">
-         <a href="/profile"><h5>MY ACCOUNT</h5></a>
+         <a href="/login-register"><h5>MY ACCOUNT</h5></a>
          <a href="/login-register"><h5>CREATE ACCOUNT</h5></a>
-         <a href="/contact"><h5>CONTACT US</h5></a>
+         <a href="#"><h5>CONTACT US</h5></a>
         </div>
         <div className="login">
           <h3>LOGIN TO MY ACCOUNT</h3>

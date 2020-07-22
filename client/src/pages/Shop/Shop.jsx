@@ -10,7 +10,7 @@ const Shop = (props) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(16);
+  const [productsPerPage] = useState(8);
   const [selectValue, setSelectValue] = useState('Featured');
 
   useEffect(() => {
@@ -107,6 +107,7 @@ const Shop = (props) => {
           />
         </div>
         <Pagination
+          className="shop-pagination"
           productsPerPage={productsPerPage}
           totalProducts={products.length}
           paginate={paginate}

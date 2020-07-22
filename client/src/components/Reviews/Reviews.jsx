@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import {withRouter} from "react-router-dom"
+import { withRouter } from "react-router-dom";
 import Pagination from "../../components/pagination";
 import StarRatings from "react-star-ratings";
-import {createReview} from "../../services/reviews"
+import { createReview } from "../../services/reviews";
 
 import "./Reviews.css";
 
@@ -12,7 +12,12 @@ const Reviews = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [reviewsPerPage] = useState(4);
   const [addReview, setAddReview] = useState(false);
-  const [review, updateReview] = useState({stars: '', content: '', user_id: '', product_id:''})
+  const [review, updateReview] = useState({
+    stars: "",
+    content: "",
+    user_id: "",
+    product_id: "",
+  });
 
   //GET current products
   const indexOfLastReview = currentPage * reviewsPerPage;
@@ -23,8 +28,12 @@ const Reviews = (props) => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const newReview = () => {
-    setAddReview(true)
-    updateReview({...review, user_id: props.currentUser.id, product_id: props.currentProduct.id})
+    setAddReview(true);
+    updateReview({
+      ...review,
+      user_id: props.currentUser.id,
+      product_id: props.currentProduct.id,
+    });
   };
 
   return (
@@ -36,13 +45,13 @@ const Reviews = (props) => {
             <p>{review.content}</p>
             <StarRatings
               numberOfStars={5}
-              starRatedColor="yellow"
+              starRatedColor="white"
               rating={review.stars}
               name="rating"
               isAggregateRating={true}
               starDimension="35px"
               starSpacing="5px"
-              starEmptyColor="rgb(240,240,240)"
+              starEmptyColor="#262626"
             />
           </div>
         ))}
@@ -51,37 +60,48 @@ const Reviews = (props) => {
         productsPerPage={reviewsPerPage}
         totalProducts={reviews.length}
         paginate={paginate}
-        />
+      />
       {addReview && (
         <form
-        onSubmit={(e) => {
+          className="review-form"
+          onSubmit={(e) => {
             createReview(review);
-            console.log(review)
-            props.history.push(`/products/${props.currentProduct.id}`)
+            console.log(review);
+            props.history.push(`/products/${props.currentProduct.id}`);
           }}
         >
- 
           <textarea
             name="review-content"
+            className="review-input"
             value={review.content}
-            onChange={e => updateReview({ ...review, content: e.target.value })}
+            onChange={(e) =>
+              updateReview({ ...review, content: e.target.value })
+            }
             className="review-text"
             cols="30"
             width="10"
           ></textarea>
-          <select name ="stars" onChange={e => updateReview({ ...review, stars: e.target.value })}>
+          <select
+            className="review-input"
+            name="stars"
+            onChange={(e) => updateReview({ ...review, stars: e.target.value })}
+          >
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
-          <button type="submit">ADD REVIEW</button>
+          <button className="review-input" type="submit">
+            ADD REVIEW
+          </button>
         </form>
       )}
-      {props.currentUser && !addReview ? <button onClick={newReview}>NEW REVIEW</button> : null}
+      {props.currentUser && !addReview ? (
+        <button className="new-review-button" onClick={newReview}>NEW REVIEW</button>
+      ) : null}
     </>
   );
 };
 
-export default withRouter (Reviews);
+export default withRouter(Reviews);

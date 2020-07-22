@@ -40,3 +40,23 @@
   text-decoration: none;
   color: black;
 }
+
+@media screen and (max-width: 1200px) {
+ .products {
+   overflow-x: scroll;
+   overflow-y: hidden;
+ }
+
+ .products::-webkit-scrollbar-track {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 20px;
+  width: 2px;
+ }
+
+ .products::-webkit-scrollbar-track-thumb {
+   border: 1px solid black;
+   background-color: black;
+ }
+}
+

@@ -15,9 +15,13 @@
 }
 
 .form{
-display: flex;
 height: 100%;
+text-align: center;
 
+}
+
+.form-wrap{
+  display: flex;
 }
 
 .form-left {
@@ -74,7 +78,7 @@ margin: 30px;
 
 .add-button {
   width: 200px;
-  height: 70px;
+  height: 50px;
   border: none;
   border-radius: 0;
   outline: none;
@@ -83,4 +87,26 @@ margin: 30px;
   letter-spacing: 3px;
   margin: 0 auto 20px auto;
   text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .create-form {
+    height: 100%;
+  }
+
+  .form-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .txt-input {
+    width: 300px;
+  }
+
+  .txt-area {
+    width: 300px;
+  }
 }

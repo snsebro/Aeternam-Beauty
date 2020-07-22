@@ -16,3 +16,9 @@
   font-weight: 600;
   letter-spacing: 5px;
 }
+
+@media screen and (max-width:1200px) {
+  .content{
+    margin-top: 50px;
+  }
+}

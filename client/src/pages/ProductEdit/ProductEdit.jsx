@@ -98,13 +98,6 @@ class ProductDetail extends Component {
             <button onClick={this.handleProductDelete}>DELETE PRODUCT</button>
             </div>
           </div>
-          <div className="review-section">
-            <h1>REVIEWS</h1>
-            {/* <Reviews
-              currentUser={this.state.currentUser}
-              reviews={this.state.product.reviews}
-            /> */}
-          </div>
         </form>
       )
     );

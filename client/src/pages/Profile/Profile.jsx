@@ -11,8 +11,8 @@ export default class Profile extends Component {
         {/* <h1>{`Hi, ${this.props.currentUser.name}`}</h1> */}
         <div className="profile">
           <div className="profile-links">
-            {this.props.currentUser.is_admin ? <Link to="/shop"><h4>VIEW INVENTORY</h4></Link> : <Link to="/past-orders"><h4>PAST ORDERS</h4></Link>}
-            {this.props.currentUser.is_admin ? <Link to="/add-product"><h4>ADD INVENTORY</h4></Link> : <Link to="/reviews"><h4>VIEW REVIEWS</h4></Link>}
+            {this.props.currentUser.is_admin ? <Link to="/shop"><h4>VIEW INVENTORY</h4></Link> : <Link to="/profile"><h4>PAST ORDERS</h4></Link>}
+            {this.props.currentUser.is_admin ? <Link to="/add-product"><h4>ADD INVENTORY</h4></Link> : <Link to="/profile"><h4>VIEW REVIEWS</h4></Link>}
             {<Link to="/" onClick={this.props.handleLogout}><h4>LOGOUT</h4></Link>}
           </div>
           <div className="images">

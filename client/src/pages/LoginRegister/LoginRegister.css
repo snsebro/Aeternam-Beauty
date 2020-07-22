@@ -73,3 +73,72 @@ h5 {
 h3 {
   margin-bottom: 10px;
 }
+
+@media screen and (max-width: 850px) {
+  .login-register {
+    grid-template-areas: 
+    'account-links'
+    'login'
+    'register';
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.5fr 2fr;
+    margin-top: 20px;
+    padding: 0px;
+    height: 100%;
+  }
+
+  .account-links {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .login {
+    justify-content: normal;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .login input {
+    width: 300px;
+  }
+
+  .register {
+    justify-content: normal;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .register input {
+    width: 300px;
+  }
+
+
+  .login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    align-items: center;
+  }
+
+  .register form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    align-items: center;
+  }
+
+  .login button {
+    margin-bottom: 20px;
+    width: 30%;
+  }
+
+  .register button {
+    margin-bottom: 20px;
+    width: 30%;
+  }
+
+}

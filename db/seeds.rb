@@ -12,37 +12,40 @@ Product.destroy_all
 
 @admin = User.create!(name: 'Shayne', username: 'snsebro', password: 'password', is_admin: true)
 
-# @customer = User.create!(name: 'Nathan', username: 'kenji1001', password: 'password', is_admin: false)
+@customer1 = User.create!(name: 'Nathaniel', username: 'Mamillion', password: 'password', is_admin: false)
+@customer2 = User.create!(name: 'Tenzin', username: 'Icy', password: 'password', is_admin: false)
+@customer3 = User.create!(name: 'Xiaoyu', username: 'Ling', password: 'password', is_admin: false)
+@customer4 = User.create!(name: 'Johnathan', username: 'Jostar', password: 'password', is_admin: false)
 
-@night_repair = Product.create!(name: 'Estee Lauder Advanced Night Repair', on_sale: false, new_in: true, product_shot: 'https://i.ibb.co/f2zgqR5/night-repair.jpg', alt_shot: 'https://i.ibb.co/RgN3J9r/Screen-Shot-2020-07-20-at-4-13-47-PM.png', product_details: 'What it is: A powerful serum that significantly helps reduce the look of aging.
+@night_repair = Product.create!(name: 'Estee Lauder Advanced Night Repair', on_sale: false, new_in: true, product_shot: 'https://i.ibb.co/f2zgqR5/night-repair.jpg', alt_shot: 'https://i.ibb.co/RgN3J9r/Screen-Shot-2020-07-20-at-4-13-47-PM.png', product_details: 'What it is:\n A powerful serum that significantly helps reduce the look of aging.\n
 
-Skin Type: Normal, Dry, Combination, and Oily
+Skin Type:\n Normal, Dry, Combination, and Oily\n
 
-Skincare Concerns: Fine Lines and Wrinkles, Dryness, and Dullness and Uneven Texture
+Skincare Concerns:\n Fine Lines and Wrinkles, Dryness, and Dullness and Uneven Texture\n
 
-Formulation: Serum
+Formulation: Serum\n
 
-Ingredient Callouts: This product contains less than one percent of synthetic fragrances. It’s also dermatologist and ophthalmologist-tested and non-acnegenic.
+Ingredient Callouts:\n This product contains less than one percent of synthetic fragrances. It’s also dermatologist and ophthalmologist-tested and non-acnegenic.\n
 
-What Else You Need to Know: Advanced Night Repair Synchronized Recovery Complex II hydrates and adds radiance for more youthful-looking skin. This powerful nighttime renewal uses Exclusive ChronoluxCB™ Technology to significantly reduce the look of key signs of aging.
+What Else You Need to Know: Advanced Night Repair Synchronized Recovery Complex II hydrates and adds radiance for more youthful-looking skin. This powerful nighttime renewal uses Exclusive ChronoluxCB™ Technology to significantly reduce the look of key signs of aging.\n
 
-Clinical Results: After 4 weeks of using Advanced Night Repair Synchronized Recovery Complex II:
-- 75% agreed their skin looked more youthful
-- 75% agreed their skin feels smoother, hydrated, and stronger
-- 82% agreed their skin was more radiant and evenly toned
+Clinical Results: After 4 weeks of using Advanced Night Repair Synchronized Recovery Complex II:\n
+- 75% agreed their skin looked more youthful\n
+- 75% agreed their skin feels smoother, hydrated, and stronger\n
+- 82% agreed their skin was more radiant and evenly toned\n
 - 83% agreed their skin looked healthier and fresher', price: 75)
 
-@nars_concealer = Product.create!(name: 'Nars Soft Matte Complete Concealer', on_sale: false, new_in: true, product_shot: 'https://i.ibb.co/DMsx87d/nars-concealer.jpg', alt_shot:'https://i.ibb.co/xGTYNmb/Screen-Shot-2020-07-20-at-4-21-15-PM.png', product_details: 'What it is: A full-coverage, oil-free concealer that conceals and blurs imperfections with a soft-matte, natural-looking finish.
+@nars_concealer = Product.create!(name: 'Nars Soft Matte Complete Concealer', on_sale: false, new_in: true, product_shot: 'https://i.ibb.co/DMsx87d/nars-concealer.jpg', alt_shot:'https://i.ibb.co/xGTYNmb/Screen-Shot-2020-07-20-at-4-21-15-PM.png', product_details: 'What it is: A full-coverage, oil-free concealer that conceals and blurs imperfections with a soft-matte, natural-looking finish.\n
 
-Coverage: Full
+Coverage: Full\n
 
-Finish: Matte
+Finish: Matte\n
 
-Formulation: Cream
+Formulation: Cream\n
 
-Skin Type: Normal, Dry, Combination, and Oily
+Skin Type: Normal, Dry, Combination, and Oily\n
 
-Highlighted Ingredients:
+Highlighted Ingredients:\n
 - Peptides: Reduce appearance of wrinkles and pores over time.
 - Hyaluronic Acid: Reduce appearance of wrinkles and pores.
 - Antioxidants (Vitamins A, C, and E): Deliver Daily Defense.
@@ -88,7 +91,7 @@ The 01 palette features 12 cream shades face for highlighting, neutralizing, con
 These products contain organic ingredients, and they are not tested on animals and are free of silicone, petrochemicals, and mineral oil.
 ', price: 65.50)
 
-@toner = Product.create!(name: 'Cover FX Glitter Drops', on_sale: true, new_in: true, product_shot: 'https://i.ibb.co/bJv0k9H/coverfx.jpg', alt_shot: 'https://i.ibb.co/Pm87BTq/Screen-Shot-2020-07-20-at-6-31-23-PM.png', product_details: 'What it is:
+@glitter = Product.create!(name: 'Cover FX Glitter Drops', on_sale: true, new_in: true, product_shot: 'https://i.ibb.co/bJv0k9H/coverfx.jpg', alt_shot: 'https://i.ibb.co/Pm87BTq/Screen-Shot-2020-07-20-at-6-31-23-PM.png', product_details: 'What it is:
 A multidimensional glitter highlighter that imparts a high impact, light-reflective finish.
 
 What it does:
@@ -162,4 +165,45 @@ Clinical Results: In a consumer test of 64 subjects over 1 week, used with their
 # @lipstick_review5 = Review.create(stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @lipstick.id, user_id: @customer.id)
 
 # @lipstick_review6 = Review.create(stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @lipstick.id, user_id: @customer.id)
+
+
+Review.create!([
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @night_repair.id, user_id: @customer1.id},
+  {stars: 4, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @night_repair.id, user_id: @customer2.id},
+  {stars: 3, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @night_repair.id, user_id: @customer3.id},
+  {stars: 4, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @night_repair.id, user_id: @customer4.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @nars_concealer.id, user_id: @customer1.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @nars_concealer.id, user_id: @customer2.id},
+  {stars: 4, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @nars_concealer.id, user_id: @customer3.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @nars_concealer.id, user_id: @customer4.id},
+  {stars: 3, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis 
+  imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @eyeliner.id, user_id: @customer1.id},  
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @eyeliner.id, user_id: @customer2.id},
+  {stars: 4, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @eyeliner.id, user_id: @customer3.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @eyeliner.id, user_id: @customer4.id},
+  {stars: 3, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @top_shop_eyeliner.id, user_id: @customer1.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @top_shop_eyeliner.id, user_id: @customer2.id},
+  {stars: 4, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @top_shop_eyeliner.id, user_id: @customer3.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @top_shop_eyeliner.id, user_id: @customer4.id},
+  {stars: 4, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @countour.id, user_id: @customer1.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @countour.id, user_id: @customer2.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @countour.id, user_id: @customer3.id},
+  {stars: 4, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @countour.id, user_id: @customer4.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @glitter.id, user_id: @customer1.id},
+  {stars: 3, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @glitter.id, user_id: @customer2.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @glitter.id, user_id: @customer3.id},
+  {stars: 4, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @glitter.id, user_id: @customer4.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @toner.id, user_id: @customer1.id},
+  {stars: 3, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @toner.id, user_id: @customer2.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @toner.id, user_id: @customer3.id},
+  {stars: 4, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @toner.id, user_id: @customer4.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @facewash.id, user_id: @customer1.id},
+  {stars: 4, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @facewash.id, user_id: @customer2.id},
+  {stars: 3, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @facewash.id, user_id: @customer3.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @facewash.id, user_id: @customer4.id},
+  {stars: 4, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @blush.id, user_id: @customer1.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @blush.id, user_id: @customer2.id},
+  {stars: 4, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @blush.id, user_id: @customer3.id},
+  {stars: 5, content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem leo, interdum eget lectus eget, volutpat efficitur lectus. Duis ac semper odio. Maecenas ex enim, eleifend eu elit ac, interdum posuere purus. Donec egestas eros eget turpis imperdiet, vitae ullamcorper sem tempus. Vestibulum ac porttitor lorem.', product_id: @blush.id, user_id: @customer4.id},
+])
 

@@ -47,3 +47,26 @@
   letter-spacing: 3px;
   font-weight: 500;
 }
+
+@media screen and (max-width:1200px) {
+  .profile {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'profile-links'
+  }
+
+  .profile-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 10px;
+  }
+
+  .images {
+    flex-direction: column;
+    display: none;
+  }
+}

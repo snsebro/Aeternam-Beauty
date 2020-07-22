@@ -23,15 +23,15 @@ export default class Header extends Component {
             <ul>
               <li><Link to="/shop">SHOP</Link></li>
               <li><Link to="/shop">SALE</Link></li>
-              <li><Link to="/collections">COLLECTIONS</Link></li>
-              <li><Link to="/looks">LOOKS</Link></li>
-              <li><Link to="/inspo">INSPO</Link></li>
+              <li><Link to="/">COLLECTIONS</Link></li>
+              <li><Link to="/">LOOKS</Link></li>
+              <li><Link to="/">INSPO</Link></li>
             </ul>
           </div>
           <div className="nav-icons">
             <Link to={this.props.currentUser ? "/profile" : "/login-register"}><ProfileIcon className="icon"/></Link>
-            <Link to="/shop"><SearchIcon className="icon"/></Link>
-            <Link to="/cart"><ShoppingBagIcon className="icon"/></Link>
+            <Link to="/"><SearchIcon className="icon"/></Link>
+            <Link to="/"><ShoppingBagIcon className="icon"/></Link>
           </div>
         </nav>
         <div className="promo-message">
