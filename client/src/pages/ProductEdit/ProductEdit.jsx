@@ -1,9 +1,12 @@
 import "./ProductEdit.css";
-import { getProduct, updateProduct, deleteProduct } from "../../services/products";
+import {
+  getProduct,
+  updateProduct,
+  deleteProduct,
+} from "../../services/products";
 
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import Reviews from "../../components/Reviews/Reviews";
 
 class ProductDetail extends Component {
   state = {
@@ -23,18 +26,18 @@ class ProductDetail extends Component {
   };
 
   handleProductEdit = async (productData) => {
-    const id = this.props.match.params.id
+    const id = this.props.match.params.id;
     const editedProduct = await updateProduct(id, productData);
     this.setState({
-      product: editedProduct
+      product: editedProduct,
     });
   };
 
   handleProductDelete = async () => {
-    const id = this.props.match.params.id
-    await deleteProduct(id)
-    this.props.history.push("/shop")
-  }
+    const id = this.props.match.params.id;
+    await deleteProduct(id);
+    this.props.history.push("/shop");
+  };
 
   handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -46,15 +49,19 @@ class ProductDetail extends Component {
   render() {
     return (
       this.state.product && (
-        <form className="edit-form" onSubmit={(e) => {
-          e.preventDefault()
-          this.handleProductEdit(this.state.product)
-          this.props.history.push(`/products/${this.props.match.params.id}/edit`)
-        }
-        }>
+        <form
+          className="edit-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            this.handleProductEdit(this.state.product);
+            this.props.history.push(
+              `/products/${this.props.match.params.id}/edit`
+            );
+          }}
+        >
           <div className="edit-product-div">
             <div className="image-update">
-              <img src={this.state.product.product_shot} />
+              <img alt="product" src={this.state.product.product_shot} />
               <input
                 name="product_shot"
                 type="text"
@@ -69,7 +76,7 @@ class ProductDetail extends Component {
               ></input>
             </div>
             <div className="info-update">
-            <h3>NAME:</h3>
+              <h3>NAME:</h3>
               <input
                 name="name"
                 type="text"
@@ -94,8 +101,8 @@ class ProductDetail extends Component {
                 ></textarea>
               </p>
               <button type="submit">EDIT PRODUCT</button>
-              <br/>
-            <button onClick={this.handleProductDelete}>DELETE PRODUCT</button>
+              <br />
+              <button onClick={this.handleProductDelete}>DELETE PRODUCT</button>
             </div>
           </div>
         </form>

@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 
- const pagination = ({ productsPerPage, totalProducts, paginate }) => {
-  const pageNumbers = []
+const pagination = ({ productsPerPage, totalProducts, paginate }) => {
+  const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalProducts / productsPerPage); i++) {
-    pageNumbers.push(i)
+    pageNumbers.push(i);
   }
   return (
     <nav className="pages">
-      {pageNumbers.map(number => (
+      {pageNumbers.map((number) => (
         <li key={number}>
           <a onClick={() => paginate(number)} href={`#/${number}`}>
             {number}
@@ -16,7 +16,7 @@ import React from 'react'
         </li>
       ))}
     </nav>
-  )
- }
+  );
+};
 
- export default pagination
+export default pagination;

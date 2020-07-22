@@ -1,5 +1,5 @@
-import React from 'react'
-import "./Footer.css"
+import React from "react";
+import "./Footer.css";
 
 export default function Footer() {
   return (
@@ -40,6 +40,8 @@ export default function Footer() {
         <h6>Loves</h6>
         <h6>Flash Unlimited Shipping</h6>
         <h6>Download the App</h6>
+        <h6>Account Terms</h6>
+        <h6>Privacy Policy</h6>
       </div>
       <div className="links-4, links">
         <h5>SUPPORT</h5>
@@ -53,6 +55,6 @@ export default function Footer() {
         <h6>Store Locations</h6>
         <h6>Book a Reservation</h6>
       </div>
-   </footer>
-  )
+    </footer>
+  );
 }

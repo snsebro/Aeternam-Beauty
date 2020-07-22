@@ -1,5 +1,4 @@
 .heroCTA {
-  /* border: 1px solid black; */
   display: flex;
   width: 784px;
   height: 490px;
@@ -9,13 +8,11 @@
 }
 
 .left {
-  /* border: 1px solid black; */
   height: 100%;
   width: 50%;
 }
 
 .right {
-  /* border: 1px solid black; */
   height: 100%;
   width: 50%;
   display: flex;
@@ -25,7 +22,6 @@
 }
 
 .CTA {
-  /* border: 1px solid black; */
   width: 80%;
   height: 50%;
   display: flex;
@@ -41,16 +37,17 @@
   margin-bottom: 10px;
 }
 
-.CTA h3{
+.CTA h3 {
   font-size: 25px;
   font-weight: 200;
 }
 
-.CTA h5{
+.CTA h5 {
   margin: 5px 0px;
 }
 
-.left, .right {
+.left,
+.right {
   background-position: center;
   background-size: cover;
   background-repeat: none;
@@ -69,9 +66,9 @@
   font-weight: 500;
 }
 
-.CTA button :hover{
+.CTA button :hover {
   cursor: pointer;
-  background-color: #2C1F34;
+  background-color: #2c1f34;
 }
 
 @media screen and (max-width: 500px) {
@@ -79,7 +76,7 @@
     flex-direction: column;
   }
 
-  .right h3{
+  .right h3 {
     font-size: 15px;
   }
 

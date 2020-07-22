@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { Component} from "react";
 import { Route, withRouter } from "react-router-dom";
 import { AZ, ZA, lowestFirst, highestFirst } from "./components/sort";
 

@@ -2,7 +2,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 3fr;
-  grid-template-areas: 
+  grid-template-areas:
     "title title title title"
     "links-1 links-2 links-3 links-4";
   width: 100%;
@@ -36,7 +36,6 @@ footer h5 {
   align-items: center;
   /* border: 2px solid white; */
   text-align: center;
-
 }
 
 .links-1 {

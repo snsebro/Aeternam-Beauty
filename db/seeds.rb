@@ -17,7 +17,7 @@ Product.destroy_all
 @customer3 = User.create!(name: 'Xiaoyu', username: 'Ling', password: 'password', is_admin: false)
 @customer4 = User.create!(name: 'Johnathan', username: 'Jostar', password: 'password', is_admin: false)
 
-@night_repair = Product.create!(name: 'Estee Lauder Advanced Night Repair', on_sale: false, new_in: true, product_shot: 'https://i.ibb.co/f2zgqR5/night-repair.jpg', alt_shot: 'https://i.ibb.co/RgN3J9r/Screen-Shot-2020-07-20-at-4-13-47-PM.png', product_details: 'What it is:\n A powerful serum that significantly helps reduce the look of aging.\n
+@night_repair = Product.create!(name: 'Advanced Night Repair', on_sale: false, new_in: true, product_shot: 'https://i.ibb.co/f2zgqR5/night-repair.jpg', alt_shot: 'https://i.ibb.co/RgN3J9r/Screen-Shot-2020-07-20-at-4-13-47-PM.png', product_details: 'What it is:\n A powerful serum that significantly helps reduce the look of aging.\n
 
 Skin Type:\n Normal, Dry, Combination, and Oily\n
 
@@ -35,7 +35,7 @@ Clinical Results: After 4 weeks of using Advanced Night Repair Synchronized Reco
 - 82% agreed their skin was more radiant and evenly toned\n
 - 83% agreed their skin looked healthier and fresher', price: 75)
 
-@nars_concealer = Product.create!(name: 'Nars Soft Matte Complete Concealer', on_sale: false, new_in: true, product_shot: 'https://i.ibb.co/DMsx87d/nars-concealer.jpg', alt_shot:'https://i.ibb.co/xGTYNmb/Screen-Shot-2020-07-20-at-4-21-15-PM.png', product_details: 'What it is: A full-coverage, oil-free concealer that conceals and blurs imperfections with a soft-matte, natural-looking finish.\n
+@nars_concealer = Product.create!(name: 'Nars Complete Concealer', on_sale: false, new_in: true, product_shot: 'https://i.ibb.co/DMsx87d/nars-concealer.jpg', alt_shot:'https://i.ibb.co/xGTYNmb/Screen-Shot-2020-07-20-at-4-21-15-PM.png', product_details: 'What it is: A full-coverage, oil-free concealer that conceals and blurs imperfections with a soft-matte, natural-looking finish.\n
 
 Coverage: Full\n
 
@@ -109,7 +109,7 @@ When you spot our Clean seal, you can be sure we’ve checked that this brand’
 Clean at Sephora™ is formulated without: 
 Sulfates SLS and SLES, parabens, formaldehydes, formaldehyde-releasing agents, phthalates, mineral oil, retinyl palmitate, oxybenzone, coal tar, hydroquinone, triclosan, triclocarban. All skincare, hair, and makeup brands with the Clean Seal have less than one percent of synthetic fragrances.', price: 20.50)
 
-@facewash = Product.create!(name: 'KKW Contour Stick Set', on_sale: false, new_in: true, product_shot: 'https://i.ibb.co/QPS0ydd/kkw.png', alt_shot: 'https://i.ibb.co/cwJFG3V/kkw-biege.jpg', product_details: 'What it is:
+@facewash = Product.create!(name: 'Shade Match Contour Stick Set', on_sale: false, new_in: true, product_shot: 'https://i.ibb.co/QPS0ydd/kkw.png', alt_shot: 'https://i.ibb.co/cwJFG3V/kkw-biege.jpg', product_details: 'What it is:
 A multidimensional glitter highlighter that imparts a high impact, light-reflective finish.
 
 What it does:
@@ -147,7 +147,7 @@ The optically transparent particles alter the appearance of the skin by manipula
 
 Hourglass products are 100 percent cruelty-free.', price: 45.50)
 
-@toner = Product.create!(name: 'Huile Ecalt Visage Petail Toner', on_sale: false, new_in: true, product_shot: 'https://i.ibb.co/TthMTmm/pink-flowers.jpg', alt_shot: 'https://i.ibb.co/cbjgtLF/Screen-Shot-2020-07-20-at-6-41-38-PM.png', product_details: 'What it is: A three-in-one setting spray that preps, sets, and refreshes makeup—available in two translucent shades for fair-to-medium and medium-to-deep skin tones.
+@toner = Product.create!(name: 'Huile Visage Petal Toner', on_sale: false, new_in: true, product_shot: 'https://i.ibb.co/TthMTmm/pink-flowers.jpg', alt_shot: 'https://i.ibb.co/cbjgtLF/Screen-Shot-2020-07-20-at-6-41-38-PM.png', product_details: 'What it is: A three-in-one setting spray that preps, sets, and refreshes makeup—available in two translucent shades for fair-to-medium and medium-to-deep skin tones.
 
 What Else You Need to Know: This long-lasting setting spray is inspired by backstage makeup techniques at Dior’s runway shows. A genuine glow booster and skin perfector, Airflash Radiance Mist gives the complexion a look of radiance and vitality. The formula uses a micro-diffusion technique to set makeup. Light-enhancing pigments help revive the complexion’s natural glow, while hyaluronic acid supports skin’s natural hydration with each use.
 

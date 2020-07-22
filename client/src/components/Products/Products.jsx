@@ -1,6 +1,5 @@
 import React from "react";
 import StarRatings from "react-star-ratings"
-import { ReactComponent as FiveStars } from "../../frontend_assets/5-stars.svg";
 
 import "./Products.css";
 import { Link } from "react-router-dom";
@@ -15,7 +14,7 @@ export const Products = ({ products, loading, aggregateStars, currentUser}) => {
         const starAggregate = (aggregateStars(product.reviews))
         return (
         <div className="product-div" key={product.id}>
-            <img className="product-img" src={product.product_shot} onMouseOver={(e) => { e.target.setAttribute('src', product.alt_shot) }} onMouseOut={(e) => {e.target.setAttribute('src', product.product_shot)}}/>
+            <img alt="product" className="product-img" src={product.product_shot} onMouseOver={(e) => { e.target.setAttribute('src', product.alt_shot) }} onMouseOut={(e) => {e.target.setAttribute('src', product.product_shot)}}/>
             <Link to={!currentUser || !currentUser.is_admin ? `/products/${product.id}` : `/products/${product.id}/edit`}>
               <h4>{product.name.toUpperCase()}</h4>
             </Link>

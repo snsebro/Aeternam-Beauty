@@ -5,60 +5,69 @@ export default class LoginRegister extends Component {
   state = {
     login: {
       username: "",
-      password: ""
+      password: "",
     },
     register: {
       name: "",
       username: "",
       password: "",
-      is_admin: false
+      is_admin: false,
     },
-    passwordConfirm: ""
+    passwordConfirm: "",
   };
 
   handleInput = (e) => {
     const { name, value } = e.target;
-    this.setState({[name]: value });
+    this.setState({ [name]: value });
   };
 
   handleLoginInput = (e) => {
     const { name, value } = e.target;
-    this.setState(prevState => ({
-      login: { ...prevState.login, [name]: value }}));
+    this.setState((prevState) => ({
+      login: { ...prevState.login, [name]: value },
+    }));
   };
 
   handleRegisterInput = (e) => {
     const { name, value } = e.target;
-    this.setState(prevState => ({
-      register: { ...prevState.register, [name]: value }}));
+    this.setState((prevState) => ({
+      register: { ...prevState.register, [name]: value },
+    }));
   };
 
   passwordMatch = () => {
     if (this.state.register.password === this.state.passwordConfirm) {
-      return
+      return;
     } else {
-
     }
-  }
+  };
 
   render() {
-    const { name, username, password } = this.state.register
-    const { handleRegister, handleLogin, history } = this.props
-    
+    const { name, username, password } = this.state.register;
+    const { handleRegister, handleLogin, history } = this.props;
+
     return (
       <div className="login-register">
         <div className="account-links">
-         <a href="/login-register"><h5>MY ACCOUNT</h5></a>
-         <a href="/login-register"><h5>CREATE ACCOUNT</h5></a>
-         <a href="#"><h5>CONTACT US</h5></a>
+          <a href="/login-register">
+            <h5>MY ACCOUNT</h5>
+          </a>
+          <a href="/login-register">
+            <h5>CREATE ACCOUNT</h5>
+          </a>
+          <a href="/login-register">
+            <h5>CONTACT US</h5>
+          </a>
         </div>
         <div className="login">
           <h3>LOGIN TO MY ACCOUNT</h3>
-          <form onSubmit={(e) => {
-            e.preventDefault()
-            handleLogin(this.state.login)
-            history.push("/")
-          }}>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleLogin(this.state.login);
+              history.push("/");
+            }}
+          >
             <label>
               <input
                 type="text"
@@ -80,11 +89,13 @@ export default class LoginRegister extends Component {
         </div>
         <div className="register">
           <h3>CREATE AN ACCOUNT</h3>
-          <form onSubmit={(e) => {
-            e.preventDefault()
-            handleRegister(this.state.register)
-            history.push("/")
-          }}>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleRegister(this.state.register);
+              history.push("/");
+            }}
+          >
             <label>
               <input
                 type="text"
@@ -120,7 +131,11 @@ export default class LoginRegister extends Component {
                 onChange={this.handleInput}
               ></input>
             </label>
-            <button disabled={this.state.passwordConfirm === password ? false : true}>REGISTER</button>
+            <button
+              disabled={this.state.passwordConfirm === password ? false : true}
+            >
+              REGISTER
+            </button>
           </form>
         </div>
       </div>

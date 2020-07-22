@@ -8,7 +8,6 @@ import "./Reviews.css";
 
 const Reviews = (props) => {
   const reviews = props.reviews;
-  const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [reviewsPerPage] = useState(4);
   const [addReview, setAddReview] = useState(false);
@@ -72,12 +71,11 @@ const Reviews = (props) => {
         >
           <textarea
             name="review-content"
-            className="review-input"
+            className="review-input review-text"
             value={review.content}
             onChange={(e) =>
               updateReview({ ...review, content: e.target.value })
             }
-            className="review-text"
             cols="30"
             width="10"
           ></textarea>
@@ -98,7 +96,9 @@ const Reviews = (props) => {
         </form>
       )}
       {props.currentUser && !addReview ? (
-        <button className="new-review-button" onClick={newReview}>NEW REVIEW</button>
+        <button className="new-review-button" onClick={newReview}>
+          NEW REVIEW
+        </button>
       ) : null}
     </>
   );

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
-import { createProduct } from "../../services/products";
+import { withRouter } from "react-router-dom"
 import "./ProductCreate.css";
 
 class ProductCreate extends Component {
