@@ -12,10 +12,10 @@ Product.destroy_all
 
 @admin = User.create!(name: 'Shayne', username: 'snsebro', password: 'password', is_admin: true)
 
-@customer1 = User.create!(name: 'Nathaniel', username: 'Mamillion', password: 'password', is_admin: false)
-@customer2 = User.create!(name: 'Tenzin', username: 'Icy', password: 'password', is_admin: false)
-@customer3 = User.create!(name: 'Xiaoyu', username: 'Ling', password: 'password', is_admin: false)
-@customer4 = User.create!(name: 'Johnathan', username: 'Jostar', password: 'password', is_admin: false)
+@customer1 = User.create!(name: 'Nathaniel', username: 'Plus_Ultra', password: 'password', is_admin: false)
+@customer2 = User.create!(name: 'Tenzin', username: 'Icy_T', password: 'password', is_admin: false)
+@customer3 = User.create!(name: 'Xiaoyu', username: 'Xiao_Ling', password: 'password', is_admin: false)
+@customer4 = User.create!(name: 'Johnathan', username: 'John_Jostar', password: 'password', is_admin: false)
 
 @night_repair = Product.create!(name: 'Advanced Night Repair', on_sale: false, new_in: true, product_shot: 'https://i.ibb.co/f2zgqR5/night-repair.jpg', alt_shot: 'https://i.ibb.co/RgN3J9r/Screen-Shot-2020-07-20-at-4-13-47-PM.png', product_details: 'What it is:\n A powerful serum that significantly helps reduce the look of aging.\n
 
