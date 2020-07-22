@@ -128,7 +128,7 @@ src
 
 #### ERD Model
 
-![Alt text](./assets/Aeternam-Beauty-ERD.jpg?raw=true "Optional Title")
+![Alt text](./assets/Aeternam-Final-ERD.jpg?raw=true "Optional Title")
 
 <br>
 
