@@ -8,8 +8,8 @@ import "./Header.css";
 export default class Header extends Component {
   state = {
     promotion:
-      "SUMMER SALE! SAVE 15% OFF YOUR NEXT ORDER WITH THE CODE ‘GA-20’ AT CHECKOUT",
-    endDate: "ENDS 7/23 AT 11:59 P.M. EST",
+      "FALL SALE! SAVE 15% OFF YOUR NEXT ORDER WITH THE CODE ‘GA-20’ AT CHECKOUT",
+    endDate: "ENDS 11/24 AT 11:59 P.M. EST",
   };
 
   render() {
